@@ -1,3 +1,5 @@
+import { array } from "fast-check";
+
 /**
  * This worksheet adapts the final question of Exam 1 of Computing 1 2020/21.
  * Here you should complete each of the functions as they are specified.
@@ -14,8 +16,8 @@ const Exam = Object.create(null);
 //    for example:
 //      an input list of [1,2,3,4,5,6,7,8]
 //      returns [1,4,7]
-Exam.every_third = function () {
-    return;
+Exam.every_third = function (array) {
+    return array.filter((ignore, k) => k % 3 === 0);
 };
 
 
@@ -29,7 +31,10 @@ Exam.every_third = function () {
 //       the input sentences "the cow jumped over the moon" and
 //                            "jack and jill went up the"
 //       returns "the jack cow and jumped jill over went the up moon the"
-Exam.merge_sentences = function () {
+Exam.merge_sentences = function (sentence_1,sentence_2) {
+    if (sentence_1.length === sentence_2.length){
+        
+    }
     return;
 };
 
@@ -38,8 +43,17 @@ Exam.merge_sentences = function () {
 //     for example:
 //          the input "sPonGe bOb"
 //          returns 6
-Exam.lowercase_count = function () {
-    return;
+Exam.lowercase_count = function (input_string) {
+    let count = 0;
+
+    //loop over every character
+    for (const char of input_string) {
+        if (char.match(/[a-z]/)) {
+            count += 1;
+
+        }
+    }
+    return count;
 };
 
 
