@@ -21,3 +21,4 @@ const board = [
 ];
 
 print_boards(board, right(board));
+
