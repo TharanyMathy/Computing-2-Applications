@@ -79,7 +79,14 @@ Deck.decks_equal = (deck_1, deck_2) => (
  * https://en.wikipedia.org/wiki/Faro_shuffle
  */
 Deck.faro_out_shuffle = function (deck) {
-    return deck; // Placeholder implementation.
+    // const faro = (deck) => deck.slice(0, (deck.length / 2)).flatMap((card, i) =>[card, deck[i + (deck.length / 2)]]);
+
+    // return (faro(deck));
+    const top = deck.slice(0, Math.floor(deck.length / 2));
+    const bottom = deck.slice(Math.floor(deck.length / 2), deck.length);
+    return top.flatMap(function (card, index) {
+        return [card, bottom[index]];
+    });
 };
 
 /**

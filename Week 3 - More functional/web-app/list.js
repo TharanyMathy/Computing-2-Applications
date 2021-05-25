@@ -32,8 +32,4 @@ List.zip = (func) => (arr1) => (arr2) => arr1.map((ignore, index) =>
 func(arr1[index],arr2[index]));
 
 
-
-
-// List.zip = (function) => (array) => (array) => array; // not sure 
-
 export default Object.freeze(List);
